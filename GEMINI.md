@@ -29,6 +29,13 @@ Construir y evolucionar una aplicación web 100 % navegable en 3D del departamen
    - **Caminar (1ª Persona):** altura 1,65 m, flechas/WASD con colisiones contra muros y paso libre por puertas y ventanales.
    - **Minimapa 2D interactivo** con clic para teletransportarse y barra superior de ambientes.
 
+## Flujo de trabajo obligatorio (Local + GitHub + GitHub Pages)
+Siempre que el usuario pida una modificación al proyecto:
+1. Aplicar los cambios en la versión local (`src/data/departamento.json`, `src/main.js`, `index.html`, etc.) y mantener sincronizado `standalone/depto-3d-g2439.html`.
+2. Verificar que la compilación (`npm run build`) pase sin errores y que no se incluyan datos personales ni archivos excluidos (`referencias/*`, `*.zip`).
+3. Hacer `git add`, `git commit` y `git push` a `origin main` en `https://github.com/nfpesce/Depto_3D` para replicar los cambios en GitHub y disparar automáticamente el despliegue en **GitHub Pages** (`https://nfpesce.github.io/Depto_3D/`).
+4. Confirmar que el workflow `.github/workflows/deploy.yml` finalice con estado `success`.
+
 ## Próximos pasos sugeridos en Antigravity
 - Recibir fotos de cada ambiente en `referencias/` e ir refinando medidas reales, colores de paredes, pisos y muebles específicos en `src/data/departamento.json` y `src/main.js`.
 - Modularizar `src/main.js` en `src/builders/structure.js`, `src/builders/furniture.js` y `src/controls/navigation.js` a medida que crezca el catálogo de muebles.
