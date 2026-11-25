@@ -1,0 +1,8 @@
+node_modules/
+dist/
+.DS_Store
+*.log
+*.zip
+# Mantener plano.pdf y fotos personales solo en local (no subir a GitHub público)
+referencias/*
+!referencias/README.txt
