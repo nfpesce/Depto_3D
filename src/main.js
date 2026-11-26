@@ -132,6 +132,14 @@ import APARTMENT_DATA from "./data/departamento.json";
     const matPlanter = new THREE.MeshStandardMaterial({ color: 0xd6d3d1, roughness: 0.75 });
     const matTerracotta = new THREE.MeshStandardMaterial({ color: 0xc28b6b, roughness: 0.72 });
     const matAccentBlue = new THREE.MeshStandardMaterial({ color: 0x0284c7, roughness: 0.4 });
+    const matOakKitchen = new THREE.MeshStandardMaterial({ color: 0xc4a277, roughness: 0.62 });
+    const matCounterLight = new THREE.MeshStandardMaterial({ color: 0xf1efe9, roughness: 0.28 });
+    const matStainless = new THREE.MeshStandardMaterial({ color: 0xb0b8c1, roughness: 0.32, metalness: 0.68 });
+    const matOvenGlass = new THREE.MeshStandardMaterial({ color: 0x111827, roughness: 0.16, metalness: 0.35 });
+    const matTealAccent = new THREE.MeshStandardMaterial({ color: 0x4d8b8c, roughness: 0.4 });
+    const matGlassTable = new THREE.MeshStandardMaterial({ color: 0x88c9bf, transparent: true, opacity: 0.38, roughness: 0.12, metalness: 0.1 });
+    const matChairFabric = new THREE.MeshStandardMaterial({ color: 0x7c6858, roughness: 0.9 });
+    const matGoldFrame = new THREE.MeshStandardMaterial({ color: 0xb89446, roughness: 0.35, metalness: 0.6 });
 
     const floorMaterials = {
       wood: (w, d) => {
@@ -480,15 +488,20 @@ import APARTMENT_DATA from "./data/departamento.json";
             break;
           }
           case "dining_set": {
-            // Rectangular 6-chair dining table (1.85 m along X parallel to balcony x 0.95 m deep)
-            addBox(g, 1.85, 0.06, 0.95, 0, 0.74, 0, matWoodDark);
-            addBox(g, 0.10, 0.72, 0.10, -0.78, 0.36, -0.36, matWoodDark);
-            addBox(g, 0.10, 0.72, 0.10, 0.78, 0.36, -0.36, matWoodDark);
-            addBox(g, 0.10, 0.72, 0.10, -0.78, 0.36, 0.36, matWoodDark);
-            addBox(g, 0.10, 0.72, 0.10, 0.78, 0.36, 0.36, matWoodDark);
+            // Rectangular 6-chair glass dining table (1.85 m along X parallel to balcony x 0.95 m deep)
+            addBox(g, 1.85, 0.025, 0.95, 0, 0.75, 0, matGlassTable);
+            // Vertical glass slab legs + central brace
+            addBox(g, 0.025, 0.73, 0.72, -0.72, 0.365, 0, matGlassTable);
+            addBox(g, 0.025, 0.73, 0.72, 0.72, 0.365, 0, matGlassTable);
+            addBox(g, 1.42, 0.14, 0.025, 0, 0.66, 0, matGlassTable);
+            // Overhead matte-black linear pendant lamp
+            addBox(g, 1.12, 0.11, 0.06, 0, 2.04, 0, matOutdoorFrame);
+            addBox(g, 0.015, 0.56, 0.015, -0.42, 2.36, 0, matFrame);
+            addBox(g, 0.015, 0.56, 0.015, 0.42, 2.36, 0, matFrame);
+            // 6 upholstered taupe/brown dining chairs with dark wood legs
             const chairOffsets = [
-              [-0.45, -0.68, 0], [0.45, -0.68, 0],
-              [-0.45, 0.68, Math.PI], [0.45, 0.68, Math.PI],
+              [-0.45, -0.66, 0], [0.45, -0.66, 0],
+              [-0.45, 0.66, Math.PI], [0.45, 0.66, Math.PI],
               [-1.12, 0, Math.PI / 2],
               [1.12, 0, -Math.PI / 2]
             ];
@@ -496,14 +509,24 @@ import APARTMENT_DATA from "./data/departamento.json";
               const cg = new THREE.Group();
               cg.position.set(cx, 0, cz);
               cg.rotation.y = ry;
-              addBox(cg, 0.44, 0.06, 0.44, 0, 0.45, 0, matWoodLight);
-              addBox(cg, 0.44, 0.42, 0.06, 0, 0.68, -0.19, matWoodLight);
-              addBox(cg, 0.05, 0.44, 0.05, -0.18, 0.22, -0.18, matFrame);
-              addBox(cg, 0.05, 0.44, 0.05, 0.18, 0.22, -0.18, matFrame);
-              addBox(cg, 0.05, 0.44, 0.05, -0.18, 0.22, 0.18, matFrame);
-              addBox(cg, 0.05, 0.44, 0.05, 0.18, 0.22, 0.18, matFrame);
+              addBox(cg, 0.45, 0.07, 0.45, 0, 0.45, 0, matChairFabric);
+              addBox(cg, 0.45, 0.48, 0.07, 0, 0.72, -0.19, matChairFabric);
+              addBox(cg, 0.045, 0.44, 0.045, -0.18, 0.22, -0.18, matWoodDark);
+              addBox(cg, 0.045, 0.44, 0.045, 0.18, 0.22, -0.18, matWoodDark);
+              addBox(cg, 0.045, 0.44, 0.045, -0.18, 0.22, 0.18, matWoodDark);
+              addBox(cg, 0.045, 0.44, 0.045, 0.18, 0.22, 0.18, matWoodDark);
               g.add(cg);
             });
+            break;
+          }
+          case "wall_art": {
+            const aw = item.w || 0.45;
+            const ah = item.h || 0.45;
+            const ay = item.y || 1.66;
+            addBox(g, aw, ah, 0.025, 0, ay, 0, matGoldFrame);
+            addBox(g, aw - 0.06, ah - 0.06, 0.028, 0, ay, 0.004, matWhiteGloss);
+            const artMat = item.palette === "sea" ? matAccentBlue : matTerracotta;
+            addBox(g, aw - 0.12, ah - 0.12, 0.03, 0, ay, 0.008, artMat);
             break;
           }
           case "breakfast_set": {
@@ -518,15 +541,112 @@ import APARTMENT_DATA from "./data/departamento.json";
             break;
           }
           case "kitchen_counter": {
-            addBox(g, item.w, 0.86, item.d, 0, 0.43, 0, matWhiteGloss);
-            addBox(g, item.w + 0.02, 0.04, item.d + 0.02, 0, 0.88, 0, matGranite);
+            addBox(g, item.w, 0.86, item.d, 0, 0.43, 0, matOakKitchen);
+            addBox(g, item.w + 0.02, 0.04, item.d + 0.02, 0, 0.88, 0, matCounterLight);
             if (item.hasSink) {
-              addBox(g, 0.4, 0.02, 0.72, 0, 0.905, 0, matMetal);
+              addBox(g, 0.4, 0.02, 0.72, 0, 0.905, 0, matStainless);
             }
             break;
           }
           case "fridge": {
-            addBox(g, 0.68, 1.85, 0.68, 0, 0.925, 0, matMetal);
+            // Stainless steel 2-door refrigerator facing +Z (rotated via item.rot)
+            addBox(g, 0.68, 1.84, 0.66, 0, 0.92, 0, matStainless);
+            addBox(g, 0.685, 0.022, 0.02, 0, 1.32, 0.33, matOutdoorFrame); // freezer split
+            addBox(g, 0.16, 0.24, 0.02, 0, 1.04, 0.332, matOvenGlass); // water dispenser
+            addBox(g, 0.02, 0.44, 0.03, -0.28, 1.56, 0.34, matFrame);
+            addBox(g, 0.02, 0.58, 0.03, -0.28, 0.98, 0.34, matFrame);
+            break;
+          }
+          case "kitchen_cook_unit": {
+            // West-wall cooking counter (light oak cabinets, light quartz top, cooktop, built-in oven, upper cabinets + hood)
+            const kw = item.w || 0.62;
+            const kd = item.d || 1.56;
+            addBox(g, kw - 0.02, 0.84, kd, -0.01, 0.43, 0, matOakKitchen);
+            addBox(g, kw - 0.08, 0.08, kd - 0.02, -0.03, 0.04, 0, matWhiteGloss);
+            addBox(g, kw, 0.04, kd + 0.02, 0, 0.87, 0, matCounterLight);
+            // Built-in black oven facing +X
+            addBox(g, 0.03, 0.50, 0.58, kw / 2 - 0.005, 0.46, 0, matOvenGlass);
+            addBox(g, 0.03, 0.11, 0.58, kw / 2 - 0.005, 0.77, 0, matStainless);
+            addBox(g, 0.035, 0.022, 0.44, kw / 2 + 0.02, 0.66, 0, matStainless);
+            // Glass ceramic cooktop (anafe)
+            addBox(g, 0.48, 0.02, 0.58, 0.02, 0.895, 0, matOvenGlass);
+            // Paper towel roll near fridge end
+            const roll = new THREE.Mesh(new THREE.CylinderGeometry(0.065, 0.065, 0.24, 14), matWhiteGloss);
+            roll.position.set(0.10, 1.01, -kd / 2 + 0.16);
+            roll.castShadow = true;
+            g.add(roll);
+            // Upper light oak cabinets + stainless range hood
+            addBox(g, 0.34, 0.76, kd, -kw / 2 + 0.17, 1.88, 0, matOakKitchen);
+            addBox(g, 0.44, 0.08, 0.60, -kw / 2 + 0.24, 1.47, 0, matStainless);
+            break;
+          }
+          case "kitchen_sink_unit": {
+            // East-wall sink + dishwasher + upper cabinets with microwave & open shelves (front faces -X)
+            const kw = item.w || 0.62;
+            const kd = item.d || 2.42;
+            const dwLen = 0.62;
+            const cabLen = kd - dwLen;
+            // Lower oak cabinets (north/middle) + built-in stainless dishwasher (south)
+            addBox(g, kw - 0.02, 0.84, cabLen, 0.01, 0.43, -dwLen / 2, matOakKitchen);
+            addBox(g, kw - 0.02, 0.84, dwLen - 0.02, 0.01, 0.43, kd / 2 - dwLen / 2, matStainless);
+            addBox(g, 0.02, 0.05, dwLen - 0.08, -kw / 2 + 0.005, 0.80, kd / 2 - dwLen / 2, matOutdoorFrame);
+            // Light quartz countertop
+            addBox(g, kw, 0.04, kd + 0.02, 0, 0.87, 0, matCounterLight);
+            // Double stainless sink + curved faucet
+            addBox(g, 0.42, 0.02, 0.74, -0.02, 0.895, -0.14, matStainless);
+            addBox(g, 0.03, 0.28, 0.03, 0.20, 1.03, -0.14, matStainless);
+            addBox(g, 0.18, 0.025, 0.025, 0.12, 1.16, -0.14, matStainless);
+            // Coffee maker (north end)
+            addBox(g, 0.20, 0.30, 0.22, 0.06, 1.04, -kd / 2 + 0.24, matOutdoorFrame);
+            // Countertop white & teal water dispenser (south end)
+            addBox(g, 0.32, 0.46, 0.34, 0.02, 1.12, kd / 2 - 0.26, matWhiteGloss);
+            addBox(g, 0.33, 0.14, 0.35, 0.02, 1.24, kd / 2 - 0.26, matTealAccent);
+            // Upper oak cabinets: microwave cubby (north), closed doors (middle), open 2-tier shelves (south)
+            const ux = kw / 2 - 0.17;
+            // North upper + white microwave
+            addBox(g, 0.34, 0.38, 0.56, ux, 2.07, -kd / 2 + 0.28, matOakKitchen);
+            addBox(g, 0.30, 0.28, 0.46, ux, 1.68, -kd / 2 + 0.28, matWhiteGloss);
+            addBox(g, 0.02, 0.22, 0.32, ux - 0.15, 1.68, -kd / 2 + 0.24, matOvenGlass);
+            // Middle closed oak doors
+            addBox(g, 0.34, 0.76, 1.20, ux, 1.88, -0.05, matOakKitchen);
+            // South open oak shelf box
+            const sz = kd / 2 - 0.33;
+            addBox(g, 0.34, 0.03, 0.66, ux, 2.25, sz, matOakKitchen);
+            addBox(g, 0.34, 0.03, 0.66, ux, 1.88, sz, matOakKitchen);
+            addBox(g, 0.34, 0.03, 0.66, ux, 1.51, sz, matOakKitchen);
+            addBox(g, 0.34, 0.76, 0.03, ux, 1.88, sz + 0.315, matOakKitchen);
+            addBox(g, 0.03, 0.76, 0.66, ux + 0.155, 1.88, sz, matOakKitchen);
+            // Small storage jars in open shelves
+            addBox(g, 0.12, 0.18, 0.12, ux, 1.62, sz - 0.12, matWhiteGloss);
+            addBox(g, 0.12, 0.20, 0.12, ux, 1.63, sz + 0.10, matWoodLight);
+            addBox(g, 0.14, 0.22, 0.14, ux, 2.00, sz + 0.04, matAccentBlue);
+            break;
+          }
+          case "dryer_unit": {
+            // White front-loading dryer facing -X + potted herbs on top + slim white organizer drawers
+            const dw = item.w || 0.60;
+            const dd = item.d || 0.62;
+            addBox(g, dw, 0.85, dd, 0, 0.425, 0, matWhiteGloss);
+            const drumRing = new THREE.Mesh(new THREE.CylinderGeometry(0.22, 0.22, 0.025, 20), matFrame);
+            drumRing.rotation.z = Math.PI / 2;
+            drumRing.position.set(-dw / 2 - 0.008, 0.40, 0);
+            g.add(drumRing);
+            const drumGlass = new THREE.Mesh(new THREE.CylinderGeometry(0.18, 0.18, 0.03, 20), matOvenGlass);
+            drumGlass.rotation.z = Math.PI / 2;
+            drumGlass.position.set(-dw / 2 - 0.01, 0.40, 0);
+            g.add(drumGlass);
+            addBox(g, 0.02, 0.08, 0.24, -dw / 2 - 0.005, 0.76, 0.08, matOutdoorFrame);
+            // Small potted rosemary/herbs on top of dryer
+            const herbPot = new THREE.Mesh(new THREE.CylinderGeometry(0.08, 0.065, 0.13, 12), matOutdoorFrame);
+            herbPot.position.set(-0.04, 0.915, -0.06);
+            g.add(herbPot);
+            const herbLeaf = new THREE.Mesh(new THREE.DodecahedronGeometry(0.13, 0), matLeafDark);
+            herbLeaf.position.set(-0.04, 1.07, -0.06);
+            herbLeaf.scale.set(0.85, 1.3, 0.85);
+            g.add(herbLeaf);
+            // Two slim white organizer drawer units immediately south
+            addBox(g, 0.42, 0.56, 0.19, 0.08, 0.28, dd / 2 + 0.12, matWhiteGloss);
+            addBox(g, 0.42, 0.56, 0.19, 0.08, 0.28, dd / 2 + 0.34, matWhiteGloss);
             break;
           }
           case "stove": {
@@ -535,8 +655,35 @@ import APARTMENT_DATA from "./data/departamento.json";
             break;
           }
           case "laundry": {
-            addBox(g, item.w, 0.85, item.d, 0, 0.425, 0, matWhiteGloss);
-            addBox(g, 0.55, 0.55, 0.04, 0.3, 0.45, item.d / 2 + 0.01, matFrame); // washer door
+            // Lavadero against north wall (front faces +Z): oak sink cabinet on left + white front-load washer on right + upper oak cabinets
+            const lw = item.w || 1.48;
+            const ld = item.d || 0.58;
+            const washW = 0.62;
+            const cabW = lw - washW - 0.04;
+            // Left under-sink oak cabinet
+            addBox(g, cabW, 0.84, ld - 0.02, -lw / 2 + cabW / 2, 0.43, -0.01, matOakKitchen);
+            addBox(g, cabW - 0.04, 0.08, ld - 0.08, -lw / 2 + cabW / 2, 0.04, -0.02, matWhiteGloss);
+            // Right front-loading washing machine
+            const wx = lw / 2 - washW / 2;
+            addBox(g, washW, 0.83, ld - 0.02, wx, 0.415, 0, matWhiteGloss);
+            const wRing = new THREE.Mesh(new THREE.CylinderGeometry(0.20, 0.20, 0.025, 20), matFrame);
+            wRing.rotation.x = Math.PI / 2;
+            wRing.position.set(wx, 0.39, ld / 2);
+            g.add(wRing);
+            const wGlass = new THREE.Mesh(new THREE.CylinderGeometry(0.16, 0.16, 0.03, 20), matOvenGlass);
+            wGlass.rotation.x = Math.PI / 2;
+            wGlass.position.set(wx, 0.39, ld / 2 + 0.004);
+            g.add(wGlass);
+            // Continuous light countertop + laundry sink & faucet
+            addBox(g, lw, 0.04, ld + 0.02, 0, 0.86, 0, matCounterLight);
+            addBox(g, 0.46, 0.02, 0.38, -lw / 2 + cabW / 2, 0.885, 0, matStainless);
+            addBox(g, 0.025, 0.22, 0.025, -lw / 2 + cabW / 2, 0.99, -0.18, matStainless);
+            // Upper oak cabinets + right open cubby
+            addBox(g, 0.96, 0.72, 0.34, -lw / 2 + 0.48, 1.88, -ld / 2 + 0.17, matOakKitchen);
+            addBox(g, 0.48, 0.03, 0.34, lw / 2 - 0.24, 2.22, -ld / 2 + 0.17, matOakKitchen);
+            addBox(g, 0.48, 0.03, 0.34, lw / 2 - 0.24, 1.88, -ld / 2 + 0.17, matOakKitchen);
+            addBox(g, 0.48, 0.03, 0.34, lw / 2 - 0.24, 1.54, -ld / 2 + 0.17, matOakKitchen);
+            addBox(g, 0.03, 0.72, 0.34, lw / 2 - 0.015, 1.88, -ld / 2 + 0.17, matOakKitchen);
             break;
           }
           case "bathtub": {

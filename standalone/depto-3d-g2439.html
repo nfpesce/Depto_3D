@@ -106,7 +106,7 @@
       <div class="w-2.5 h-2.5 rounded-full bg-sky-400 shrink-0"></div>
       <div class="leading-tight">
         <div class="text-xs sm:text-sm font-semibold tracking-tight">G2439</div>
-        <div class="text-[11px] text-slate-300 font-mono">134,6 m² cub. + 25 m² balcón · Rev. 3</div>
+        <div class="text-[11px] text-slate-300 font-mono">134,6 m² cub. + 25 m² balcón · Rev. 4</div>
       </div>
     </div>
 
@@ -221,12 +221,13 @@
       },
       rooms: [
         { id: "vestidor", name: "Vestidor", dim: "2.20×2.60", x: 0.0, z: 0.0, w: 2.2, d: 2.6, floor: "wood", spawn: [1.1, 1.4], lookAt: [1.1, 3.0] },
-        { id: "bano_suite", name: "Baño en Suite", dim: "2.70×1.80", x: 2.2, z: 0.0, w: 2.7, d: 1.8, floor: "tile", spawn: [3.2, 1.2], lookAt: [3.2, 0.2] },
+        { id: "bano_suite", name: "Baño Principal", dim: "2.70×1.80", x: 2.2, z: 0.0, w: 2.7, d: 1.8, floor: "tile", spawn: [3.2, 1.2], lookAt: [3.2, 0.2] },
         { id: "dorm_ppal", name: "Dormitorio Principal", dim: "3.10×4.60", x: 0.0, z: 2.6, w: 3.1, d: 5.0, floor: "wood", spawn: [2.1, 3.6], lookAt: [0.8, 5.4], quick: true, shortName: "Dorm. Principal" },
         { id: "alcoba_suite", name: "Acceso Suite", dim: "1.50×1.10", x: 2.2, z: 1.8, w: 1.5, d: 1.1, floor: "wood", hiddenLabel: true },
-        { id: "bano_ppal", name: "Baño Principal", dim: "2.80×1.80", x: 4.9, z: 0.0, w: 2.8, d: 1.8, floor: "tile", spawn: [6.3, 1.2], lookAt: [6.3, 0.2] },
+        { id: "bano_ppal", name: "Baño Nico", dim: "2.80×1.80", x: 4.9, z: 0.0, w: 2.8, d: 1.8, floor: "tile", spawn: [6.3, 1.2], lookAt: [6.3, 0.2] },
         { id: "pasillo", name: "Pasillo", dim: "5.00×1.10", x: 3.7, z: 1.8, w: 5.0, d: 1.1, floor: "wood", hiddenLabel: true },
-        { id: "placard_pasillo", name: "Placard", dim: "1.00×1.80", x: 7.7, z: 0.0, w: 1.0, d: 1.8, floor: "wood", hiddenLabel: true },
+        { id: "estar_nicho", name: "Estar Comedor", dim: "", x: 7.7, z: 0.0, w: 1.0, d: 1.1, floor: "porcelain", hiddenLabel: true },
+        { id: "placard_pasillo", name: "Placard", dim: "1.00×0.70", x: 7.7, z: 1.1, w: 1.0, d: 0.7, floor: "wood", hiddenLabel: true },
         { id: "escritorio", name: "Escritorio Nelson", dim: "2.80×4.10", x: 3.1, z: 2.9, w: 2.8, d: 4.7, floor: "wood", spawn: [4.2, 4.1], lookAt: [5.7, 5.2], quick: true, shortName: "Escritorio Nelson" },
         { id: "dorm_nico", name: "Dormitorio Nico", dim: "2.80×4.30", x: 5.9, z: 2.9, w: 2.8, d: 4.7, floor: "wood", spawn: [7.0, 4.0], lookAt: [7.5, 6.2], quick: true, shortName: "Dorm. Nico" },
         { id: "toilette", name: "Toilette", dim: "1.40×1.70", x: 9.7, z: -1.7, w: 1.4, d: 1.7, floor: "tile", spawn: [10.4, -0.7], lookAt: [10.4, -1.5] },
@@ -234,7 +235,7 @@
         { id: "estar", name: "Estar Comedor", dim: "3.80×7.40", x: 8.7, z: 0.0, w: 3.8, d: 6.95, floor: "porcelain", spawn: [10.6, 2.7], lookAt: [10.6, 6.2], quick: true, shortName: "Estar Comedor" },
         { id: "bano_serv", name: "Baño Ceci", dim: "2.50×1.05", x: 12.5, z: -1.7, w: 2.5, d: 1.05, floor: "tile", spawn: [13.5, -1.15], lookAt: [14.5, -1.25] },
         { id: "dorm_serv", name: "Escritorio Ceci", dim: "2.50×2.10", x: 12.5, z: -0.65, w: 2.5, d: 2.05, floor: "porcelain", spawn: [13.5, 1.05], lookAt: [13.6, 0.0], quick: true, shortName: "Escritorio Ceci" },
-        { id: "cocina", name: "Cocina / Lavadero", dim: "2.50×6.30", x: 12.5, z: 1.4, w: 2.5, d: 5.55, floor: "tile_kitchen", spawn: [13.7, 2.9], lookAt: [13.7, 6.2], quick: true, shortName: "Cocina / Lav." },
+        { id: "cocina", name: "Cocina / Lavadero", dim: "2.50×6.30", x: 12.5, z: 1.4, w: 2.5, d: 5.55, floor: "tile_kitchen", spawn: [13.8, 5.9], lookAt: [13.8, 2.0], quick: true, shortName: "Cocina / Lav." },
         { id: "balcon_dorm", name: "Balcón", dim: "", x: 0.0, z: 7.6, w: 8.7, d: 1.45, floor: "balcony", isExterior: true, hiddenLabel: true },
         { id: "balcon", name: "Balcón Aterrazado", dim: "25.00 m²", x: 8.7, z: 6.95, w: 6.3, d: 2.1, floor: "balcony", spawn: [13.2, 8.1], lookAt: [8.5, 8.0], quick: true, shortName: "Balcón", isExterior: true }
       ],
@@ -261,10 +262,11 @@
         { x1: 4.9, z1: 0.0, x2: 4.9, z2: 1.8, t: 0.11 },
         { x1: 2.2, z1: 1.8, x2: 4.9, z2: 1.8, t: 0.11, openings: [{ type: "door", from: 0.55, to: 1.3, head: 2.1 }] },
 
-        // Baño Principal & Placard de pasillo
+        // Baño Nico & Nicho de comedor / Placard
         { x1: 7.7, z1: 0.0, x2: 7.7, z2: 1.8, t: 0.11 },
         { x1: 4.9, z1: 1.8, x2: 7.7, z2: 1.8, t: 0.11, openings: [{ type: "door", from: 1.05, to: 1.8, head: 2.1 }] },
-        { x1: 7.7, z1: 1.8, x2: 8.7, z2: 1.8, t: 0.11 },
+        { x1: 7.7, z1: 1.1, x2: 8.7, z2: 1.1, t: 0.11 },
+        { x1: 7.7, z1: 1.8, x2: 8.7, z2: 1.8, t: 0.11, openings: [{ type: "door", from: 0.12, to: 0.88, head: 2.1 }] },
 
         // Master Suite / Hallway / Bedrooms partitions
         { x1: 3.7, z1: 1.8, x2: 3.7, z2: 2.9, t: 0.11, openings: [{ type: "door", from: 0.15, to: 0.95, head: 2.1 }] },
@@ -273,19 +275,20 @@
         { x1: 3.1, z1: 2.9, x2: 5.9, z2: 2.9, t: 0.11, openings: [{ type: "door", from: 1.8, to: 2.65, head: 2.1 }] },
         { x1: 5.9, z1: 2.9, x2: 8.7, z2: 2.9, t: 0.11, openings: [{ type: "door", from: 0.15, to: 1.0, head: 2.1 }] },
 
-        // Hallway / Estar Comedor divider
-        { x1: 8.7, z1: 0.0, x2: 8.7, z2: 7.6, t: 0.13, openings: [{ type: "door", from: 1.95, to: 2.8, head: 2.15 }] },
+        // Hallway / Estar Comedor divider (open north of z=1.1 into dining alcove)
+        { x1: 8.7, z1: 1.1, x2: 8.7, z2: 7.6, t: 0.13, openings: [{ type: "door", from: 0.85, to: 1.7, head: 2.15 }] },
 
         // Toilette
         { x1: 9.7, z1: 0.0, x2: 11.1, z2: 0.0, t: 0.11 },
         { x1: 11.1, z1: -1.7, x2: 11.1, z2: 0.0, t: 0.11, openings: [{ type: "door", from: 0.85, to: 1.55, head: 2.1 }] },
 
         // Estar Comedor / Cocina-Dependencia divider
-        { x1: 12.5, z1: -1.7, x2: 12.5, z2: 6.95, t: 0.13, openings: [{ type: "door", from: 3.7, to: 4.55, head: 2.15 }] },
+        { x1: 12.5, z1: -1.7, x2: 12.5, z2: 6.95, t: 0.13, openings: [{ type: "door", from: 3.65, to: 4.48, head: 2.15 }] },
 
-        // Dependencia & Baño de Servicio
+        // Dependencia & Baño de Servicio + Cocina/Lavadero portal
         { x1: 12.5, z1: -0.65, x2: 15.0, z2: -0.65, t: 0.11, openings: [{ type: "door", from: 0.75, to: 1.4, head: 2.1 }] },
-        { x1: 12.5, z1: 1.4, x2: 15.0, z2: 1.4, t: 0.11, openings: [{ type: "door", from: 0.15, to: 0.85, head: 2.1 }] }
+        { x1: 12.5, z1: 1.4, x2: 15.0, z2: 1.4, t: 0.11, openings: [{ type: "door", from: 0.15, to: 0.85, head: 2.1 }] },
+        { x1: 12.5, z1: 2.88, x2: 15.0, z2: 2.88, t: 0.11, openings: [{ type: "passage", from: 0.72, to: 1.88, head: 2.22 }] }
       ],
       furniture: [
         // --- VESTIDOR ---
@@ -304,14 +307,11 @@
         { type: "nightstand", room: "dorm_ppal", x: 0.32, z: 6.38 },
         { type: "dresser", room: "dorm_ppal", x: 2.86, z: 5.1, w: 0.42, d: 1.45, h: 0.82 },
 
-        // --- BAÑO PRINCIPAL ---
+        // --- BAÑO NICO ---
         { type: "bathtub", room: "bano_ppal", x: 7.25, z: 0.9, w: 0.75, d: 1.6 },
         { type: "vanity", room: "bano_ppal", x: 6.1, z: 0.3, w: 1.05, d: 0.48 },
         { type: "toilet", room: "bano_ppal", x: 5.25, z: 0.7, rot: Math.PI / 2, isBidet: true },
         { type: "toilet", room: "bano_ppal", x: 5.25, z: 1.35, rot: Math.PI / 2 },
-
-        // --- PLACARD PASILLO ---
-        { type: "wardrobe", room: "placard_pasillo", x: 8.2, z: 0.9, w: 0.85, d: 1.6, h: 2.4 },
 
         // --- ESCRITORIO (sin camas ni estantería trasera, escritorio con 3 monitores en pared derecha) ---
         { type: "wardrobe", room: "escritorio", x: 4.02, z: 3.28, w: 1.68, d: 0.58, h: 2.4 },
@@ -327,8 +327,10 @@
         { type: "toilet", room: "toilette", x: 10.65, z: -1.35, rot: 0 },
         { type: "vanity", room: "toilette", x: 10.02, z: -0.75, w: 0.42, d: 0.65 },
 
-        // --- ESTAR COMEDOR (3.80 x 7.40): mesa 6 sillas paralela al balcón + living invertido (TV derecha, sillón izquierda) ---
-        { type: "dining_set", room: "estar", x: 10.55, z: 1.35 },
+        // --- ESTAR COMEDOR (3.80 x 7.40): mesa vidrio 6 sillas paralela al balcón + nicho abierto + living invertido ---
+        { type: "dining_set", room: "estar", x: 9.95, z: 1.22 },
+        { type: "wall_art", room: "estar", x: 8.78, z: 1.52, w: 0.36, h: 0.3, y: 1.66, rot: Math.PI / 2, palette: "sea" },
+        { type: "wall_art", room: "estar", x: 9.65, z: 0.1, w: 0.56, h: 0.68, y: 1.68, rot: 0, palette: "harbor" },
         { type: "armchair", room: "estar", x: 10.05, z: 3.55, rot: 0 },
         { type: "armchair", room: "estar", x: 11.3, z: 3.55, rot: 0 },
         { type: "sofa", room: "estar", x: 9.25, z: 5.15, rot: Math.PI / 2 },
@@ -343,13 +345,12 @@
         { type: "toilet", room: "bano_serv", x: 14.55, z: -1.25, rot: -Math.PI / 2 },
         { type: "vanity", room: "bano_serv", x: 13.75, z: -1.42, w: 0.55, d: 0.38 },
 
-        // --- COCINA / LAVADERO (2.50 x 6.30) ---
-        { type: "laundry", room: "cocina", x: 14.15, z: 1.78, w: 1.45, d: 0.6 },
-        { type: "kitchen_counter", room: "cocina", x: 12.88, z: 4.15, w: 0.62, d: 2.6, hasSink: true },
-        { type: "fridge", room: "cocina", x: 14.52, z: 3.25 },
-        { type: "stove", room: "cocina", x: 14.55, z: 4.45 },
-        { type: "kitchen_counter", room: "cocina", x: 14.58, z: 5.25, w: 0.62, d: 0.9, hasSink: false },
-        { type: "breakfast_set", room: "cocina", x: 13.75, z: 6.1 },
+        // --- COCINA / LAVADERO (2.50 x 6.30): heladera y anafe/horno a la izquierda; bacha, lavavajillas y secarropas a la derecha ---
+        { type: "laundry", room: "cocina", x: 14.16, z: 1.76, w: 1.48, d: 0.58 },
+        { type: "fridge", room: "cocina", x: 12.92, z: 3.3, rot: Math.PI / 2 },
+        { type: "kitchen_cook_unit", room: "cocina", x: 12.88, z: 4.44, w: 0.62, d: 1.56 },
+        { type: "kitchen_sink_unit", room: "cocina", x: 14.6, z: 4.16, w: 0.62, d: 2.42 },
+        { type: "dryer_unit", room: "cocina", x: 14.6, z: 5.72, w: 0.6, d: 0.62 },
 
         // --- BALCÓN ATERRAZADO (living exterior, planta en rincón escalonado, mesa bistró + 2 sillas y equipo AA) ---
         { type: "balcony_lounge", room: "balcon", x: 10.75, z: 8.0 },
@@ -490,6 +491,14 @@
     const matPlanter = new THREE.MeshStandardMaterial({ color: 0xd6d3d1, roughness: 0.75 });
     const matTerracotta = new THREE.MeshStandardMaterial({ color: 0xc28b6b, roughness: 0.72 });
     const matAccentBlue = new THREE.MeshStandardMaterial({ color: 0x0284c7, roughness: 0.4 });
+    const matOakKitchen = new THREE.MeshStandardMaterial({ color: 0xc4a277, roughness: 0.62 });
+    const matCounterLight = new THREE.MeshStandardMaterial({ color: 0xf1efe9, roughness: 0.28 });
+    const matStainless = new THREE.MeshStandardMaterial({ color: 0xb0b8c1, roughness: 0.32, metalness: 0.68 });
+    const matOvenGlass = new THREE.MeshStandardMaterial({ color: 0x111827, roughness: 0.16, metalness: 0.35 });
+    const matTealAccent = new THREE.MeshStandardMaterial({ color: 0x4d8b8c, roughness: 0.4 });
+    const matGlassTable = new THREE.MeshStandardMaterial({ color: 0x88c9bf, transparent: true, opacity: 0.38, roughness: 0.12, metalness: 0.1 });
+    const matChairFabric = new THREE.MeshStandardMaterial({ color: 0x7c6858, roughness: 0.9 });
+    const matGoldFrame = new THREE.MeshStandardMaterial({ color: 0xb89446, roughness: 0.35, metalness: 0.6 });
 
     const floorMaterials = {
       wood: (w, d) => {
@@ -835,15 +844,17 @@
             break;
           }
           case "dining_set": {
-            // Rectangular 6-chair dining table (1.85 m along X parallel to balcony x 0.95 m deep)
-            addBox(g, 1.85, 0.06, 0.95, 0, 0.74, 0, matWoodDark);
-            addBox(g, 0.10, 0.72, 0.10, -0.78, 0.36, -0.36, matWoodDark);
-            addBox(g, 0.10, 0.72, 0.10, 0.78, 0.36, -0.36, matWoodDark);
-            addBox(g, 0.10, 0.72, 0.10, -0.78, 0.36, 0.36, matWoodDark);
-            addBox(g, 0.10, 0.72, 0.10, 0.78, 0.36, 0.36, matWoodDark);
+            // Rectangular 6-chair glass dining table (1.85 m along X parallel to balcony x 0.95 m deep)
+            addBox(g, 1.85, 0.025, 0.95, 0, 0.75, 0, matGlassTable);
+            addBox(g, 0.025, 0.73, 0.72, -0.72, 0.365, 0, matGlassTable);
+            addBox(g, 0.025, 0.73, 0.72, 0.72, 0.365, 0, matGlassTable);
+            addBox(g, 1.42, 0.14, 0.025, 0, 0.66, 0, matGlassTable);
+            addBox(g, 1.12, 0.11, 0.06, 0, 2.04, 0, matOutdoorFrame);
+            addBox(g, 0.015, 0.56, 0.015, -0.42, 2.36, 0, matFrame);
+            addBox(g, 0.015, 0.56, 0.015, 0.42, 2.36, 0, matFrame);
             const chairOffsets = [
-              [-0.45, -0.68, 0], [0.45, -0.68, 0],
-              [-0.45, 0.68, Math.PI], [0.45, 0.68, Math.PI],
+              [-0.45, -0.66, 0], [0.45, -0.66, 0],
+              [-0.45, 0.66, Math.PI], [0.45, 0.66, Math.PI],
               [-1.12, 0, Math.PI / 2],
               [1.12, 0, -Math.PI / 2]
             ];
@@ -851,14 +862,24 @@
               const cg = new THREE.Group();
               cg.position.set(cx, 0, cz);
               cg.rotation.y = ry;
-              addBox(cg, 0.44, 0.06, 0.44, 0, 0.45, 0, matWoodLight);
-              addBox(cg, 0.44, 0.42, 0.06, 0, 0.68, -0.19, matWoodLight);
-              addBox(cg, 0.05, 0.44, 0.05, -0.18, 0.22, -0.18, matFrame);
-              addBox(cg, 0.05, 0.44, 0.05, 0.18, 0.22, -0.18, matFrame);
-              addBox(cg, 0.05, 0.44, 0.05, -0.18, 0.22, 0.18, matFrame);
-              addBox(cg, 0.05, 0.44, 0.05, 0.18, 0.22, 0.18, matFrame);
+              addBox(cg, 0.45, 0.07, 0.45, 0, 0.45, 0, matChairFabric);
+              addBox(cg, 0.45, 0.48, 0.07, 0, 0.72, -0.19, matChairFabric);
+              addBox(cg, 0.045, 0.44, 0.045, -0.18, 0.22, -0.18, matWoodDark);
+              addBox(cg, 0.045, 0.44, 0.045, 0.18, 0.22, -0.18, matWoodDark);
+              addBox(cg, 0.045, 0.44, 0.045, -0.18, 0.22, 0.18, matWoodDark);
+              addBox(cg, 0.045, 0.44, 0.045, 0.18, 0.22, 0.18, matWoodDark);
               g.add(cg);
             });
+            break;
+          }
+          case "wall_art": {
+            const aw = item.w || 0.45;
+            const ah = item.h || 0.45;
+            const ay = item.y || 1.66;
+            addBox(g, aw, ah, 0.025, 0, ay, 0, matGoldFrame);
+            addBox(g, aw - 0.06, ah - 0.06, 0.028, 0, ay, 0.004, matWhiteGloss);
+            const artMat = item.palette === "sea" ? matAccentBlue : matTerracotta;
+            addBox(g, aw - 0.12, ah - 0.12, 0.03, 0, ay, 0.008, artMat);
             break;
           }
           case "breakfast_set": {
@@ -873,15 +894,92 @@
             break;
           }
           case "kitchen_counter": {
-            addBox(g, item.w, 0.86, item.d, 0, 0.43, 0, matWhiteGloss);
-            addBox(g, item.w + 0.02, 0.04, item.d + 0.02, 0, 0.88, 0, matGranite);
+            addBox(g, item.w, 0.86, item.d, 0, 0.43, 0, matOakKitchen);
+            addBox(g, item.w + 0.02, 0.04, item.d + 0.02, 0, 0.88, 0, matCounterLight);
             if (item.hasSink) {
-              addBox(g, 0.4, 0.02, 0.72, 0, 0.905, 0, matMetal);
+              addBox(g, 0.4, 0.02, 0.72, 0, 0.905, 0, matStainless);
             }
             break;
           }
           case "fridge": {
-            addBox(g, 0.68, 1.85, 0.68, 0, 0.925, 0, matMetal);
+            addBox(g, 0.68, 1.84, 0.66, 0, 0.92, 0, matStainless);
+            addBox(g, 0.685, 0.022, 0.02, 0, 1.32, 0.33, matOutdoorFrame);
+            addBox(g, 0.16, 0.24, 0.02, 0, 1.04, 0.332, matOvenGlass);
+            addBox(g, 0.02, 0.44, 0.03, -0.28, 1.56, 0.34, matFrame);
+            addBox(g, 0.02, 0.58, 0.03, -0.28, 0.98, 0.34, matFrame);
+            break;
+          }
+          case "kitchen_cook_unit": {
+            const kw = item.w || 0.62;
+            const kd = item.d || 1.56;
+            addBox(g, kw - 0.02, 0.84, kd, -0.01, 0.43, 0, matOakKitchen);
+            addBox(g, kw - 0.08, 0.08, kd - 0.02, -0.03, 0.04, 0, matWhiteGloss);
+            addBox(g, kw, 0.04, kd + 0.02, 0, 0.87, 0, matCounterLight);
+            addBox(g, 0.03, 0.50, 0.58, kw / 2 - 0.005, 0.46, 0, matOvenGlass);
+            addBox(g, 0.03, 0.11, 0.58, kw / 2 - 0.005, 0.77, 0, matStainless);
+            addBox(g, 0.035, 0.022, 0.44, kw / 2 + 0.02, 0.66, 0, matStainless);
+            addBox(g, 0.48, 0.02, 0.58, 0.02, 0.895, 0, matOvenGlass);
+            const roll = new THREE.Mesh(new THREE.CylinderGeometry(0.065, 0.065, 0.24, 14), matWhiteGloss);
+            roll.position.set(0.10, 1.01, -kd / 2 + 0.16);
+            roll.castShadow = true;
+            g.add(roll);
+            addBox(g, 0.34, 0.76, kd, -kw / 2 + 0.17, 1.88, 0, matOakKitchen);
+            addBox(g, 0.44, 0.08, 0.60, -kw / 2 + 0.24, 1.47, 0, matStainless);
+            break;
+          }
+          case "kitchen_sink_unit": {
+            const kw = item.w || 0.62;
+            const kd = item.d || 2.42;
+            const dwLen = 0.62;
+            const cabLen = kd - dwLen;
+            addBox(g, kw - 0.02, 0.84, cabLen, 0.01, 0.43, -dwLen / 2, matOakKitchen);
+            addBox(g, kw - 0.02, 0.84, dwLen - 0.02, 0.01, 0.43, kd / 2 - dwLen / 2, matStainless);
+            addBox(g, 0.02, 0.05, dwLen - 0.08, -kw / 2 + 0.005, 0.80, kd / 2 - dwLen / 2, matOutdoorFrame);
+            addBox(g, kw, 0.04, kd + 0.02, 0, 0.87, 0, matCounterLight);
+            addBox(g, 0.42, 0.02, 0.74, -0.02, 0.895, -0.14, matStainless);
+            addBox(g, 0.03, 0.28, 0.03, 0.20, 1.03, -0.14, matStainless);
+            addBox(g, 0.18, 0.025, 0.025, 0.12, 1.16, -0.14, matStainless);
+            addBox(g, 0.20, 0.30, 0.22, 0.06, 1.04, -kd / 2 + 0.24, matOutdoorFrame);
+            addBox(g, 0.32, 0.46, 0.34, 0.02, 1.12, kd / 2 - 0.26, matWhiteGloss);
+            addBox(g, 0.33, 0.14, 0.35, 0.02, 1.24, kd / 2 - 0.26, matTealAccent);
+            const ux = kw / 2 - 0.17;
+            addBox(g, 0.34, 0.38, 0.56, ux, 2.07, -kd / 2 + 0.28, matOakKitchen);
+            addBox(g, 0.30, 0.28, 0.46, ux, 1.68, -kd / 2 + 0.28, matWhiteGloss);
+            addBox(g, 0.02, 0.22, 0.32, ux - 0.15, 1.68, -kd / 2 + 0.24, matOvenGlass);
+            addBox(g, 0.34, 0.76, 1.20, ux, 1.88, -0.05, matOakKitchen);
+            const sz = kd / 2 - 0.33;
+            addBox(g, 0.34, 0.03, 0.66, ux, 2.25, sz, matOakKitchen);
+            addBox(g, 0.34, 0.03, 0.66, ux, 1.88, sz, matOakKitchen);
+            addBox(g, 0.34, 0.03, 0.66, ux, 1.51, sz, matOakKitchen);
+            addBox(g, 0.34, 0.76, 0.03, ux, 1.88, sz + 0.315, matOakKitchen);
+            addBox(g, 0.03, 0.76, 0.66, ux + 0.155, 1.88, sz, matOakKitchen);
+            addBox(g, 0.12, 0.18, 0.12, ux, 1.62, sz - 0.12, matWhiteGloss);
+            addBox(g, 0.12, 0.20, 0.12, ux, 1.63, sz + 0.10, matWoodLight);
+            addBox(g, 0.14, 0.22, 0.14, ux, 2.00, sz + 0.04, matAccentBlue);
+            break;
+          }
+          case "dryer_unit": {
+            const dw = item.w || 0.60;
+            const dd = item.d || 0.62;
+            addBox(g, dw, 0.85, dd, 0, 0.425, 0, matWhiteGloss);
+            const drumRing = new THREE.Mesh(new THREE.CylinderGeometry(0.22, 0.22, 0.025, 20), matFrame);
+            drumRing.rotation.z = Math.PI / 2;
+            drumRing.position.set(-dw / 2 - 0.008, 0.40, 0);
+            g.add(drumRing);
+            const drumGlass = new THREE.Mesh(new THREE.CylinderGeometry(0.18, 0.18, 0.03, 20), matOvenGlass);
+            drumGlass.rotation.z = Math.PI / 2;
+            drumGlass.position.set(-dw / 2 - 0.01, 0.40, 0);
+            g.add(drumGlass);
+            addBox(g, 0.02, 0.08, 0.24, -dw / 2 - 0.005, 0.76, 0.08, matOutdoorFrame);
+            const herbPot = new THREE.Mesh(new THREE.CylinderGeometry(0.08, 0.065, 0.13, 12), matOutdoorFrame);
+            herbPot.position.set(-0.04, 0.915, -0.06);
+            g.add(herbPot);
+            const herbLeaf = new THREE.Mesh(new THREE.DodecahedronGeometry(0.13, 0), matLeafDark);
+            herbLeaf.position.set(-0.04, 1.07, -0.06);
+            herbLeaf.scale.set(0.85, 1.3, 0.85);
+            g.add(herbLeaf);
+            addBox(g, 0.42, 0.56, 0.19, 0.08, 0.28, dd / 2 + 0.12, matWhiteGloss);
+            addBox(g, 0.42, 0.56, 0.19, 0.08, 0.28, dd / 2 + 0.34, matWhiteGloss);
             break;
           }
           case "stove": {
@@ -890,8 +988,30 @@
             break;
           }
           case "laundry": {
-            addBox(g, item.w, 0.85, item.d, 0, 0.425, 0, matWhiteGloss);
-            addBox(g, 0.55, 0.55, 0.04, 0.3, 0.45, item.d / 2 + 0.01, matFrame); // washer door
+            const lw = item.w || 1.48;
+            const ld = item.d || 0.58;
+            const washW = 0.62;
+            const cabW = lw - washW - 0.04;
+            addBox(g, cabW, 0.84, ld - 0.02, -lw / 2 + cabW / 2, 0.43, -0.01, matOakKitchen);
+            addBox(g, cabW - 0.04, 0.08, ld - 0.08, -lw / 2 + cabW / 2, 0.04, -0.02, matWhiteGloss);
+            const wx = lw / 2 - washW / 2;
+            addBox(g, washW, 0.83, ld - 0.02, wx, 0.415, 0, matWhiteGloss);
+            const wRing = new THREE.Mesh(new THREE.CylinderGeometry(0.20, 0.20, 0.025, 20), matFrame);
+            wRing.rotation.x = Math.PI / 2;
+            wRing.position.set(wx, 0.39, ld / 2);
+            g.add(wRing);
+            const wGlass = new THREE.Mesh(new THREE.CylinderGeometry(0.16, 0.16, 0.03, 20), matOvenGlass);
+            wGlass.rotation.x = Math.PI / 2;
+            wGlass.position.set(wx, 0.39, ld / 2 + 0.004);
+            g.add(wGlass);
+            addBox(g, lw, 0.04, ld + 0.02, 0, 0.86, 0, matCounterLight);
+            addBox(g, 0.46, 0.02, 0.38, -lw / 2 + cabW / 2, 0.885, 0, matStainless);
+            addBox(g, 0.025, 0.22, 0.025, -lw / 2 + cabW / 2, 0.99, -0.18, matStainless);
+            addBox(g, 0.96, 0.72, 0.34, -lw / 2 + 0.48, 1.88, -ld / 2 + 0.17, matOakKitchen);
+            addBox(g, 0.48, 0.03, 0.34, lw / 2 - 0.24, 2.22, -ld / 2 + 0.17, matOakKitchen);
+            addBox(g, 0.48, 0.03, 0.34, lw / 2 - 0.24, 1.88, -ld / 2 + 0.17, matOakKitchen);
+            addBox(g, 0.48, 0.03, 0.34, lw / 2 - 0.24, 1.54, -ld / 2 + 0.17, matOakKitchen);
+            addBox(g, 0.03, 0.72, 0.34, lw / 2 - 0.015, 1.88, -ld / 2 + 0.17, matOakKitchen);
             break;
           }
           case "bathtub": {
